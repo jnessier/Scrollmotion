@@ -1,0 +1,71 @@
+<!doctype html>
+<html>
+<head>
+    <title>Getting Started</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.0/animate.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.min.css"/>
+    <style>
+        .sm-item {
+            height: 300px;
+            font-size: 3rem;
+            margin-bottom: 100px;
+            display: flex;
+            justify-content: center;
+            align-content: center;
+            flex-wrap: wrap;
+        }
+    </style>
+</head>
+<body>
+<div id="boxContainer" class="container">
+    <div data-sm-ratio="1" class="sm-item rounded bg-primary text-white">
+        <span>Box 1</span></div>
+    <div data-sm-animate-class="animate__bounceIn" class="sm-item rounded bg-primary text-white">
+        <span>Box 2</span></div>
+    <div data-sm-animate-class="animate__backInRight" class="sm-item rounded bg-primary text-white">
+        <span>Box 3</span></div>
+    <div data-sm-animate-class="animate__fadeInUp" class="sm-item rounded bg-primary text-white">
+        <span>Box 4</span></div>
+    <div data-sm-ratio="1" data-sm-animate-class="animate__fadeInDown" data-ratio="1" class="sm-item rounded bg-primary text-white">
+        <span>Box 5</span></div>
+</div>
+
+<div class="mx-5">
+    <button id="newButton" class="btn btn-primary">Add new box</button>
+</div>
+
+<script src="scrollmotion.js"></script>
+<script>
+    const sm = Scrollmotion('.sm-item', {
+        observeMutation: true
+    });
+    sm.start();
+
+    let newButton = document.querySelector('#newButton'),
+        boxContainer = document.querySelector('#boxContainer'),
+        animationClasses = [
+            'animate__backInLeft',
+            'animate__swing',
+            'animate__rubberBand'
+        ];
+
+    newButton.addEventListener('click', (e) => {
+        let span = document.createElement('span')
+        span.textContent = 'New Box';
+
+        let box = document.createElement('div')
+        box.classList.add(
+            'sm-item',
+            'rounded',
+            'bg-primary',
+            'text-white',
+        );
+        box.append(span);
+        box.dataset.smAnimateClass = animationClasses[Math.floor(Math.random() * animationClasses.length)];
+
+        boxContainer.append(box);
+    })
+</script>
+</body>
+</html>

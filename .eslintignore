@@ -1,0 +1,9 @@
+# don't ever lint node_modules
+node_modules
+# don't lint build output
+dist
+# don't lint build configs
+.eslintrc.js
+rollup.config.js
+# don't lint temp build output
+build

@@ -1,0 +1,58 @@
+{
+  "name": "@neoflow/scrollmotion",
+  "version": "0.0.1",
+  "description": "A JavaScript library for screen-intersected animations on page scroll.",
+  "main": "dist/scrollmotion.js",
+  "scripts": {
+    "build": "npm run build:js",
+    "build:js": "rollup --config rollup.config.js --environment NODE_ENV:production",
+    "watch": "npm run watch:js",
+    "watch:js": "rollup --config rollup.config.js --watch",
+    "serve": "npm run serve:js",
+    "serve:js": "rollup --config rollup.config.js --watch --serve",
+    "lint": "npm run lint:js",
+    "lint:js": "eslint --ext .ts ./src"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Neoflow/Scrollmotion.git"
+  },
+  "keywords": [
+    "scroll",
+    "animation",
+    "window"
+  ],
+  "author": "Jonathan Nessier, Neoflow",
+  "browserslist": "last 2 version and >1%, not ie <= 11",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Neoflow/Scrollmotion/issues"
+  },
+  "homepage": "https://github.com/Neoflow/Scrollmotion#readme",
+  "devDependencies": {
+    "@babel/core": "^7.11.6",
+    "@babel/plugin-transform-runtime": "^7.11.5",
+    "@babel/preset-env": "^7.11.5",
+    "@rbnlffl/rollup-plugin-eslint": "^1.1.2",
+    "@rollup/plugin-babel": "^5.2.1",
+    "@rollup/plugin-commonjs": "^15.1.0",
+    "@rollup/plugin-node-resolve": "^9.0.0",
+    "@rollup/plugin-strip": "^2.0.0",
+    "@rollup/plugin-typescript": "^6.0.0",
+    "@types/chai": "^4.2.13",
+    "@types/mocha": "^8.0.3",
+    "@typescript-eslint/eslint-plugin": "^4.4.0",
+    "@typescript-eslint/parser": "^4.4.0",
+    "browser-sync": "^2.26.12",
+    "chai": "^4.2.0",
+    "rollup": "^2.28.2",
+    "rollup-plugin-browsersync": "^1.1.0",
+    "rollup-plugin-terser": "^7.0.2",
+    "ts-node": "^9.0.0",
+    "typescript": "^4.0.3"
+  },
+  "dependencies": {},
+  "directories": {
+    "test": "test"
+  }
+}
