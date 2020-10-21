@@ -8,13 +8,7 @@ A JavaScript library for screen-intersected animations on page scroll.
 * Animations based on [Animate.css](https://animate.style).
 * Integrated support for custom functions.
 
-Check out the [demo page](#) to see the library in action.
-
-## ToDo
-- [ ] Create demo page
-- [x] Publish library as npm package
-- [x] Describe the advanced configuration with `data` attributes
-- [ ] Implement unit tests
+Check out the [demo page](https://scrollmotion.neoflow.ch/demo.html) to see the library in action.
 
 ## Requirements
 Any browser which fully supports ES6, [IntersectionObserver](https://caniuse.com/#search=intersectionobserver) and
@@ -66,7 +60,7 @@ const sm = new Scrollmotion('.sm-item', {
 });
 ```
 The 1st argument is a selector for the website components you want to get observed and animated (Default:`.sm-item`). 
-The 2nd argument is an object literal with the following listed options.
+The 2nd argument is an object literal for the options described below (Default:`{}`).
 
 | Key | Type | Description | Default | 
 |---|---|---|---|
@@ -87,8 +81,8 @@ The 2nd argument is an object literal with the following listed options.
 the animations with [Animate.css](https://animate.style) is not supported anymore.
 
 ## Advanced configuration
-The options `animateClass` and `ratio` can also be set as data attributes. Which will overwrite
- the globally set options of the library and lets you individually customize each website component.
+The options `animateClass` and `ratio` can also be set as data attributes for each website component, 
+which will overwrite the options set on initialization of the library.
 
 ```html
 <div class="sm-item" data-sm-animate-class="animate__backInRight" data-sm-ratio="0.5">
