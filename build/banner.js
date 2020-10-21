@@ -1,5 +1,5 @@
 const year = new Date().getFullYear(),
-    pkg = require('./../package.json');
+    pkg = require('../package.json');
 
 module.exports = () => {
     return `/*!
