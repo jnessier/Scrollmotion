@@ -41,7 +41,7 @@ npm install @neoflow/scrollmotion
 ```
 
 3\. Add ```sm-item``` as CSS class and one of the CSS classes from [Animate.css](https://animate.style) as data attribute
-```data-sm-animate-class``` to each website component you want to get animated, when they got intersected on page scroll. 
+```data-sm-animate-class``` to each website component you want to get animated, when it got intersected on page scroll. 
 ```html
 <div class="sm-item" data-sm-animate-class="animate__backInLeft">
     <!-- your content -->
@@ -67,15 +67,15 @@ The 2nd argument is an object literal for the options described below (Default:`
 | `root` | Element | Root element for the intersection observer. [Read more](https://developer.mozilla.org/en-US/docs/Web/API/IntersectionObserver/root). | `null` |
 | `rootMargin` | string | Bounding box of the root element. [Read more](https://developer.mozilla.org/en-US/docs/Web/API/IntersectionObserver/rootMargin). | `'0px 0px 0px 0px'` |
 | `threshold` | number[] | Threshold to report visibility changes to the observer. [Read more](https://developer.mozilla.org/en-US/docs/Web/API/IntersectionObserver/thresholds). | `[0, 0.25, 0.5, 0.75, 1]` |
-| `ratio` | number | Ratio how much an observed item has actually been visible,<br />before the animation performs. | `0` |
-| `observeMutation` | boolean | Set `true` to enable MutationObserver<br />and get new items observed and animated too. | `false` |
+| `ratio` | number | Ratio how much an observed item has actually been visible before the animation performs. | `0` |
+| `observeMutation` | boolean | Set `true` to enable MutationObserver and get new items observed and animated too. | `false` |
 | `animateClass` | string | Default CSS class of [Animate.css](https://animate.style) for the animation. | `animate__swing` |
-| `initialized` | () => void | Event callback, when the application of the library is initialized. | `null` |
-| `started` | () => void | Event callback, when the application of the library got started. | `null` |
+| `initialized` | () => void | Event callback, when the library is initialized. | `null` |
+| `started` | () => void | Event callback, when the library has started. | `null` |
 | `itemAnimated` | (item) => void | Event callback, when an item got animated. | `null` |
-| `stopped` | () => void | Event callback, when the application of the library got stopped. | `null` |
-| `prepareItem` | (element) => void | Function to prepare the observable item for animation. | [See code](https://github.com/Neoflow/Scrollmotion/blob/master/src/defaultConfig.ts#L17) |
-| `animateItem` | (element) => void | Function to animate the intersected item. | [See code](https://github.com/Neoflow/Scrollmotion/blob/master/src/defaultConfig.ts#L20) |
+| `stopped` | () => void | Event callback, when the the library has stopped. | `null` |
+| `prepareItem` | (element) => void | Function for preparing the observable items for animation. | [See code](https://github.com/Neoflow/Scrollmotion/blob/master/src/defaultConfig.ts#L17) |
+| `animateItem` | (element) => void | Function for animating the intersected item. | [See code](https://github.com/Neoflow/Scrollmotion/blob/master/src/defaultConfig.ts#L20) |
 
 **Please note** If you overwrite the default functions of `prepareItem` or `animateItem`, the handling of 
 the animations with [Animate.css](https://animate.style) is not supported anymore.
