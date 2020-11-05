@@ -32,7 +32,7 @@ export class App {
             this.mutationObserver = this.createMutationObserver();
         }
         if (typeof this.config.initialized === 'function') {
-            this.config.initialized();
+            this.config.initialized(this.container, this.items);
         }
     }
 

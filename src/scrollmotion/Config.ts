@@ -4,7 +4,7 @@ export interface Config {
     threshold: number[];
     ratio: number;
     observeMutation: boolean;
-    initialized: (() => void) | null,
+    initialized: ((container: Element | Document, items: Array<HTMLElement>) => void) | null,
     started: (() => void) | null,
     animateClass: string,
     itemAnimated: ((item: HTMLElement) => void) | null,

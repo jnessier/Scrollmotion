@@ -27,7 +27,7 @@ var Scrollmotion = (function () {
                 this.mutationObserver = this.createMutationObserver();
             }
             if (typeof this.config.initialized === 'function') {
-                this.config.initialized();
+                this.config.initialized(this.container, this.items);
             }
         }
         App.prototype.createIntersectionObserver = function () {
