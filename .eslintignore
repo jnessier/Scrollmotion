@@ -7,3 +7,6 @@ dist
 rollup.config.js
 # don't lint temp build output
 build
+# don't lint tests
+*.test.ts
+Mock*.ts
