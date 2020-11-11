@@ -1,5 +1,7 @@
 # Scrollmotion
 
+![Scrollmotion](assets/logo.svg)
+
 A JavaScript library for screen-intersected animations on page scroll.
 
 * Simple and lightweight. Only ~2KB.
