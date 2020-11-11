@@ -1,4 +1,4 @@
-export interface Config {
+interface Config {
     root: Element | null ;
     rootMargin: string;
     threshold: number[];

@@ -99,7 +99,7 @@ var Scrollmotion = (function () {
         return App;
     }());
 
-    var defaultConfig = {
+    var config = {
         root: null,
         rootMargin: '0px 0px 0px 0px',
         threshold: [0, 0.25, 0.5, 0.75, 1],
@@ -120,18 +120,18 @@ var Scrollmotion = (function () {
                 item.classList.add(item.dataset.smAnimateClass);
             }
             else {
-                item.classList.add(defaultConfig.animateClass);
+                item.classList.add(config.animateClass);
             }
         },
     };
 
     var index = (function (items, customConfig) {
         if (items === void 0) { items = '.sm-item'; }
-        var config = defaultConfig;
-        if (typeof customConfig === 'object') {
-            config = Object.assign(config, customConfig);
+        var config$1 = config;
+        if (customConfig instanceof Object) {
+            config$1 = Object.assign({}, config$1, customConfig);
         }
-        return new App(items, config);
+        return new App(items, config$1);
     });
 
     return index;

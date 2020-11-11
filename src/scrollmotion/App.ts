@@ -1,5 +1,3 @@
-import {Config} from "./Config";
-
 export class App {
 
     private readonly container: Element | Document;
