@@ -1,17 +1,10 @@
-<?xml version="1.0" encoding="utf-8"?>
-<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 viewBox="0 0 98.03 74.86" enable-background="new 0 0 98.03 74.86" xml:space="preserve" height="150px">
-<line fill="none" stroke="#141414" stroke-width="11" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" x1="48.96" y1="28.01" x2="48.96" y2="46.42"/>
-<polyline fill="none" stroke="#5CACD8" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" points="
-	18.5,25.32 23.3,36.66 18.5,48 "/>
-<polyline fill="none" stroke="#5CACD8" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" points="
-	2.5,25.32 7.3,36.66 2.5,48 "/>
-<polyline fill="none" stroke="#5CACD8" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" points="
-	79.53,48 74.72,36.66 79.53,25.32 "/>
-<polyline fill="none" stroke="#5CACD8" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" points="
-	95.53,48 90.72,36.66 95.53,25.32 "/>
-<polyline fill="none" stroke="#5CACD8" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" points="
-	35.32,8.17 48.7,2.5 62.09,8.17 "/>
-<polyline fill="none" stroke="#5CACD8" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" points="
-	62.09,66.69 48.7,72.36 35.32,66.69 "/>
+<svg height="150" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 98.03 74.86">
+	<defs></defs>
+	<path class="logo-mouse-reel" fill="none" stroke="#343a40" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="11" d="M48.96 28.01v18.41"></path>
+	<path class="arrow-top" fill="none" stroke="#2c6edb" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="5" d="M35.32 8.17L48.7 2.5l13.39 5.67"></path>
+	<path class="arrow-right-1" fill="none" stroke="#2c6edb" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="5" d="M79.53 48l-4.81-11.34 4.81-11.34"></path>
+	<path class="arrow-right-2" fill="none" stroke="#2c6edb" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="5" d="M95.53 48l-4.81-11.34 4.81-11.34"></path>
+	<path class="arrow-bottom" fill="none" stroke="#2c6edb" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="5" d="M62.09 66.69L48.7 72.36l-13.38-5.67"></path>
+	<path class="arrow-left-1" fill="none" stroke="#2c6edb" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="5" d="M18.5 25.32l4.8 11.34L18.5 48"></path>
+	<path class="arrow-left-2" fill="none" stroke="#2c6edb" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="5" d="M2.5 25.32l4.8 11.34L2.5 48"></path>
 </svg>
