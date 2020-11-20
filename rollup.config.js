@@ -41,7 +41,7 @@ if (isProduction) {
 
     rollupConfig.output.push({
         banner: banner,
-        format: 'esm',
+        format: 'es',
         name: 'Scrollmotion',
         sourcemap: true,
         file: './dist/scrollmotion.esm.js',

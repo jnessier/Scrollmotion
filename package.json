@@ -1,6 +1,6 @@
 {
   "name": "@neoflow/scrollmotion",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "description": "A JavaScript library for screen-intersected animations on page scroll.",
   "main": "dist/scrollmotion",
   "module": "dist/scrollmotion.esm",
