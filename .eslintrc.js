@@ -12,6 +12,10 @@ module.exports = {
         //'plugin:@typescript-eslint/eslint-recommended',
         'plugin:@typescript-eslint/recommended',
     ],
-    rules: {},
+    rules: {
+        "no-unused-vars": "off",
+        "@typescript-eslint/no-unused-vars": "off",
+        "@typescript-eslint/no-unused-vars-experimental": "error"
+    },
 
 }

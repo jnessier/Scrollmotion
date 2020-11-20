@@ -1,6 +1,6 @@
-import {describe} from 'mocha';
+import 'mocha';
 import {expect} from 'chai';
-import factory from '../src';
+import factory from '../src/index';
 import {JSDOM} from 'jsdom';
 import MockIntersectionObserver from './MockIntersectionObserver';
 
@@ -21,7 +21,7 @@ describe('App test', () => {
         globalThis.document = jsdom.window.document;
     });
 
-    it('App is initialized', () => {
+    it('Scrollmotion is initialized', () => {
         factory('.sm-item', {
             initialized: (container: any, items: Array<HTMLElement>) => {
                 expect(container).to.be.a('Document');

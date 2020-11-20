@@ -1,36 +1,36 @@
-export class App {
+export class Scrollmotion {
 
     private readonly container: Element | Document;
     private readonly items: Array<HTMLElement>;
     private readonly selector: string;
-    private readonly config: Config;
+    private readonly options: Options;
     private readonly intersectionObserver: IntersectionObserver;
-    private readonly mutationObserver: MutationObserver;
+    private readonly mutationObserver: MutationObserver | null = null;
 
-    public constructor(selector: string, config: Config) {
+    public constructor(selector: string, options: Options) {
 
         this.selector = selector;
-        this.config = config;
+        this.options = options;
 
         this.container = document;
-        if (this.config.root && this.config.root.nodeType === Node.ELEMENT_NODE) {
-            this.container = this.config.root
+        if (this.options.root && this.options.root.nodeType === Node.ELEMENT_NODE) {
+            this.container = this.options.root
         } else {
-            this.config.root = null;
+            this.options.root = null;
         }
 
         this.items = Array.from(this.container.querySelectorAll(this.selector) as NodeListOf<HTMLElement>);
         this.items.forEach((item: HTMLElement) => {
-            this.config.prepareItem(item);
+            this.options.prepareItem(item);
         })
 
         this.intersectionObserver = this.createIntersectionObserver();
 
-        if (this.config.observeMutation) {
+        if (this.options.observeMutation) {
             this.mutationObserver = this.createMutationObserver();
         }
-        if (typeof this.config.initialized === 'function') {
-            this.config.initialized(this.container, this.items);
+        if (typeof this.options.initialized === 'function') {
+            this.options.initialized(this.container, this.items);
         }
     }
 
@@ -40,7 +40,7 @@ export class App {
 
                 const target = entry.target as HTMLElement;
 
-                let ratio = this.config.ratio;
+                let ratio = this.options.ratio;
                 if (target.dataset.smRatio) {
                     ratio = target.dataset.smRatio as unknown as number;
                 }
@@ -51,9 +51,9 @@ export class App {
                 }
             });
         }, {
-            root: this.config.root,
-            rootMargin: this.config.rootMargin,
-            threshold: this.config.threshold
+            root: this.options.root,
+            rootMargin: this.options.rootMargin,
+            threshold: this.options.threshold
         });
 
         return observer;
@@ -67,7 +67,7 @@ export class App {
                         if (node.nodeType === Node.ELEMENT_NODE) {
                             const element = node as HTMLElement;
                             if (element.matches(this.selector)) {
-                                this.config.prepareItem(element);
+                                this.options.prepareItem(element);
                                 this.intersectionObserver.observe(element);
                             }
                         }
@@ -78,10 +78,10 @@ export class App {
     }
 
     private animate(item: HTMLElement): void {
-        this.config.animateItem(item);
+        this.options.animateItem(item);
 
-        if (typeof this.config.itemAnimated === 'function') {
-            this.config.itemAnimated(item);
+        if (typeof this.options.itemAnimated === 'function') {
+            this.options.itemAnimated(item);
         }
     }
 
@@ -89,16 +89,15 @@ export class App {
         this.items.forEach((item: HTMLElement) => {
             this.intersectionObserver.observe(item);
 
-            if (this.config.observeMutation) {
-                this.mutationObserver.observe(this.container, {
-                    childList: true,
-                    subtree: true
-                });
-            }
+
+            this.mutationObserver?.observe(this.container, {
+                childList: true,
+                subtree: true
+            });
         });
 
-        if (typeof this.config.started === 'function') {
-            this.config.started();
+        if (typeof this.options.started === 'function') {
+            this.options.started();
         }
     }
 
@@ -108,8 +107,8 @@ export class App {
     public stop(): void {
         this.intersectionObserver.disconnect();
 
-        if (typeof this.config.stopped === 'function') {
-            this.config.stopped();
+        if (typeof this.options.stopped === 'function') {
+            this.options.stopped();
         }
     }
 }

@@ -1,22 +1,12 @@
 {
   "compilerOptions": {
-    "target": "ES5",
-    "sourceMap": true,
-    "removeComments": true,
-    "sourceMap": true,
-    "removeComments": true,
-    "allowJs": false,
+    "target": "es6",
+    "moduleResolution": "node",
+    "noImplicitAny": true,
     "noImplicitReturns": true,
     "noImplicitThis": true,
-    "noImplicitAny": true,
-    "strictNullChecks": true,
-    "suppressImplicitAnyIndexErrors": false,
-    "noUnusedLocals": true,
-    "noUnusedParameters": true,
-    "esModuleInterop": true,
-    "allowSyntheticDefaultImports": true
-  },
-  "exclude": [
-    "node_modules"
-  ]
+    "allowSyntheticDefaultImports": true,
+    "removeComments": true,
+    "sourceMap": true
+  }
 }

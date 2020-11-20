@@ -1,4 +1,4 @@
-export const config: Config = {
+export const options: Options = {
     root: null,
     rootMargin: '0px 0px 0px 0px',
     threshold: [0, 0.25, 0.5, 0.75, 1],
@@ -19,7 +19,7 @@ export const config: Config = {
         if (item.dataset.smAnimateClass) {
             item.classList.add(item.dataset.smAnimateClass);
         } else {
-            item.classList.add(config.animateClass);
+            item.classList.add(options.animateClass);
         }
     },
 };

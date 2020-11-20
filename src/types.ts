@@ -1,5 +1,5 @@
-interface Config {
-    root: Element | null ;
+interface Options {
+    root: Element | null;
     rootMargin: string;
     threshold: number[];
     ratio: number;

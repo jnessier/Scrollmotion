@@ -1,11 +1,9 @@
-import {App} from "./scrollmotion/App";
-import {config as defaultConfig} from "./default/config";
+import {Scrollmotion} from "./Scrollmotion";
+import {options as defaultOptions} from "./default/options";
 
-export default (items = '.sm-item', customConfig?: unknown): App => {
-    let config = defaultConfig;
-    if (customConfig instanceof Object) {
-        config = Object.assign({}, config, customConfig);
-    }
+export default (items = '.sm-item', customOptions?: { [key: string]: unknown }): Scrollmotion => {
 
-    return new App(items, config);
+    const options = Object.assign({}, defaultOptions, customOptions) as Options;
+
+    return new Scrollmotion(items, options);
 };
