@@ -16,6 +16,7 @@ const rollupConfig = {
             babelHelpers: 'bundled',
             exclude: 'node_modules/**',
         }),
+        require('@rollup/plugin-strip')()
     ],
     output: [{
         banner: banner,
@@ -27,16 +28,24 @@ const rollupConfig = {
 }
 
 if (isProduction) {
-    rollupConfig.plugins.push(require('@rollup/plugin-strip')());
+    rollupConfig.output.push({
+        banner: banner,
+        format: 'iife',
+        name: 'Scrollmotion',
+        sourcemap: true,
+        plugins: [
+            require('rollup-plugin-terser').terser()
+        ],
+        file: './dist/scrollmotion.min.js',
+    })
 
     rollupConfig.output.push({
-        ...rollupConfig.output[0]
+        banner: banner,
+        format: 'esm',
+        name: 'Scrollmotion',
+        sourcemap: true,
+        file: './dist/scrollmotion.esm.js',
     });
-
-    rollupConfig.output[1].plugins = [
-        require('rollup-plugin-terser').terser()
-    ];
-    rollupConfig.output[1].file = './dist/scrollmotion.min.js';
 }
 
 export default (args) => {
@@ -48,7 +57,7 @@ export default (args) => {
                     baseDir: [
                         './build/serve',
                         './dist',
-                    //    './'
+                        //    './'
                     ],
                     routes: {
                         '/src': './src'
