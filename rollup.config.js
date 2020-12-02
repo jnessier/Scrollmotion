@@ -57,7 +57,6 @@ export default (args) => {
                     baseDir: [
                         './build/serve',
                         './dist',
-                        //    './'
                     ],
                     routes: {
                         '/src': './src'

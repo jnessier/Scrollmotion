@@ -1,10 +1,10 @@
 <svg xmlns="http://www.w3.org/2000/svg" height="150px" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" clip-rule="evenodd" viewBox="0 0 650 500">
     <defs/>
-    <path fill="none" stroke="#343a40" stroke-width="70.9" d="M324.645 189.322v118.587"/>
-    <path fill="none" stroke="#2c6edb" stroke-width="32.23" d="M128.193 171.994l30.957 73.046-30.957 73.046"/>
-    <path fill="none" stroke="#2c6edb" stroke-width="32.23" d="M25 171.994l30.958 73.046L25 318.086"/>
-    <path fill="none" stroke="#2c6edb" stroke-width="32.23" d="M521.807 318.086l-31.022-73.046 31.022-73.046"/>
-    <path fill="none" stroke="#2c6edb" stroke-width="32.23" d="M625 318.086l-31.022-73.046L625 171.994"/>
-    <path fill="none" stroke="#2c6edb" stroke-width="32.23" d="M236.674 61.523L322.968 25l86.36 36.523"/>
-    <path fill="none" stroke="#2c6edb" stroke-width="32.23" d="M409.328 438.477L322.968 475l-86.294-36.523"/>
+    <path fill="none" stroke="#343a40" stroke-width="80" d="M324.645 189.322v118.587"/>
+    <path fill="none" stroke="#2c6edb" stroke-width="48" d="M521.807 318.086l-31.022-73.046 31.022-73.046"/>
+    <path fill="none" stroke="#2c6edb" stroke-width="48" d="M128.785 318.086l31.022-73.046-31.022-73.046"/>
+    <path fill="none" stroke="#2c6edb" stroke-width="48" d="M28.785 318.086l31.022-73.046-31.022-73.046"/>
+    <path fill="none" stroke="#2c6edb" stroke-width="48" d="M621.807 318.086l-31.022-73.046 31.022-73.046"/>
+    <path fill="none" stroke="#2c6edb" stroke-width="48" d="M236.674 61.523L322.968 25l86.36 36.523"/>
+    <path fill="none" stroke="#2c6edb" stroke-width="48" d="M409.328 438.477L322.968 475l-86.294-36.523"/>
 </svg>
