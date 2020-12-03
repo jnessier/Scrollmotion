@@ -1,5 +1,5 @@
 /*!
-* Scrollmotion v0.3.3
+* Scrollmotion v0.3.4
 * Copyright 2020 Jonathan Nessier, Neoflow
 * Licensed under MIT
 */

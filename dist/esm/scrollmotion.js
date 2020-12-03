@@ -1,5 +1,5 @@
 /*!
-* Scrollmotion v0.3.3
+* Scrollmotion v0.3.4
 * Copyright 2020 Jonathan Nessier, Neoflow
 * Licensed under MIT
 */
@@ -123,4 +123,4 @@ const factory = (items = '.sm-item', customOptions) => {
 };
 
 export default factory;
-//# sourceMappingURL=scrollmotion.esm.js.map
+//# sourceMappingURL=scrollmotion.js.map

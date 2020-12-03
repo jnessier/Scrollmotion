@@ -1,9 +1,12 @@
 {
   "name": "@neoflow/scrollmotion",
-  "version": "0.3.3",
+  "version": "0.3.4",
   "description": "A JavaScript library for screen-intersected animations on page scroll.",
-  "main": "dist/scrollmotion",
-  "module": "dist/scrollmotion.esm",
+  "main": "dist/scrollmotion.js",
+  "module": "dist/esm/scrollmotion.js",
+  "files": [
+    "dist/**/*"
+  ],
   "scripts": {
     "build": "rollup --config rollup.config.js --environment NODE_ENV:production",
     "watch": "rollup --config rollup.config.js --watch",

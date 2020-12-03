@@ -24,6 +24,7 @@ const rollupConfig = {
         name: 'Scrollmotion',
         sourcemap: true,
         file: './dist/scrollmotion.js',
+        esModule: false
     }]
 }
 
@@ -37,6 +38,7 @@ if (isProduction) {
             require('rollup-plugin-terser').terser()
         ],
         file: './dist/scrollmotion.min.js',
+        esModule: false
     })
 
     rollupConfig.output.push({
@@ -44,7 +46,7 @@ if (isProduction) {
         format: 'es',
         name: 'Scrollmotion',
         sourcemap: true,
-        file: './dist/scrollmotion.esm.js',
+        file: './dist/esm/scrollmotion.js',
     });
 }
 
