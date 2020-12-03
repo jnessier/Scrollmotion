@@ -4,7 +4,7 @@
 
 A JavaScript library for screen-intersected animations on page scroll.
 
-* Simple and lightweight. Only ~2KB.
+* Simple and lightweight. Only ~1KB (gzipped).
 * Written in TypeScript. Compiled to ES6.
 * Native JavaScript. No jQuery required.
 * Animations based on [Animate.css](https://animate.style).
