@@ -1,6 +1,6 @@
 /*!
-* Scrollmotion v0.3.4
-* Copyright 2021 Jonathan Nessier, Neoflow
+* Scrollmotion v0.4.0
+* Copyright 2022 Jonathan Nessier, Neoflow
 * Licensed under MIT
 */
 class Scrollmotion {
@@ -122,5 +122,5 @@ const factory = (items = '.sm-item', customOptions) => {
     return new Scrollmotion(items, options$1);
 };
 
-export default factory;
+export { factory as default };
 //# sourceMappingURL=scrollmotion.js.map

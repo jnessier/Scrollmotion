@@ -1,6 +1,6 @@
 /*!
-* Scrollmotion v0.3.5
-* Copyright 2021 Jonathan Nessier, Neoflow
+* Scrollmotion v0.4.0
+* Copyright 2022 Jonathan Nessier, Neoflow
 * Licensed under MIT
 */
 var Scrollmotion = (function () {
@@ -127,5 +127,5 @@ var Scrollmotion = (function () {
 
     return factory;
 
-}());
+})();
 //# sourceMappingURL=scrollmotion.js.map

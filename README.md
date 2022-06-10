@@ -64,20 +64,20 @@ const sm = new Scrollmotion('.sm-item', {
 The 1st argument is a selector for the website components you want to get observed and animated (Default:`.sm-item`). 
 The 2nd argument is an object literal for the options described below (Default:`{}`).
 
-| Key | Type | Description | Default | 
-|---|---|---|---|
-| `root` | Element | Root element for the intersection observer. [Read more](https://developer.mozilla.org/en-US/docs/Web/API/IntersectionObserver/root). | `null` |
-| `rootMargin` | string | Bounding box of the root element. [Read more](https://developer.mozilla.org/en-US/docs/Web/API/IntersectionObserver/rootMargin). | `'0px 0px 0px 0px'` |
-| `threshold` | number[] | Threshold to report visibility changes to the observer. [Read more](https://developer.mozilla.org/en-US/docs/Web/API/IntersectionObserver/thresholds). | `[0, 0.25, 0.5, 0.75, 1]` |
-| `ratio` | number | Ratio how much an observed item has actually been visible before the animation performs. | `0` |
-| `observeMutation` | boolean | Set `true` to enable MutationObserver and get new items observed and animated too. | `false` |
-| `animateClass` | string | Default CSS class of [Animate.css](https://animate.style) for the animation. | `animate__swing` |
-| `initialized` | (container, items) => void | Event callback, when the library is initialized. | `null` |
-| `started` | () => void | Event callback, when the library has started. | `null` |
-| `itemAnimated` | (item) => void | Event callback, when an item got animated. | `null` |
-| `stopped` | () => void | Event callback, when the the library has stopped. | `null` |
-| `prepareItem` | (item) => void | Function for preparing the observable items for animation. | [See code](https://github.com/Neoflow/Scrollmotion/blob/master/src/defaultConfig.ts#L17) |
-| `animateItem` | (item) => void | Function for animating the intersected item. | [See code](https://github.com/Neoflow/Scrollmotion/blob/master/src/defaultConfig.ts#L20) |
+| Key | Type | Description | Default                                                                                    | 
+|---|---|---|--------------------------------------------------------------------------------------------|
+| `root` | Element | Root element for the intersection observer. [Read more](https://developer.mozilla.org/en-US/docs/Web/API/IntersectionObserver/root). | `null`                                                                                     |
+| `rootMargin` | string | Bounding box of the root element. [Read more](https://developer.mozilla.org/en-US/docs/Web/API/IntersectionObserver/rootMargin). | `'0px 0px 0px 0px'`                                                                        |
+| `threshold` | number[] | Threshold to report visibility changes to the observer. [Read more](https://developer.mozilla.org/en-US/docs/Web/API/IntersectionObserver/thresholds). | `[0, 0.25, 0.5, 0.75, 1]`                                                                  |
+| `ratio` | number | Ratio how much an observed item has actually been visible before the animation performs. | `0`                                                                                        |
+| `observeMutation` | boolean | Set `true` to enable MutationObserver and get new items observed and animated too. | `false`                                                                                    |
+| `animateClass` | string | Default CSS class of [Animate.css](https://animate.style) for the animation. | `animate__swing`                                                                           |
+| `initialized` | (container, items) => void | Event callback, when the library is initialized. | `null`                                                                                     |
+| `started` | () => void | Event callback, when the library has started. | `null`                                                                                     |
+| `itemAnimated` | (item) => void | Event callback, when an item got animated. | `null`                                                                                     |
+| `stopped` | () => void | Event callback, when the the library has stopped. | `null`                                                                                     |
+| `prepareItem` | (item) => void | Function for preparing the observable items for animation. | [See code](https://github.com/Neoflow/Scrollmotion/blob/master/src/default/options.ts#L12) |
+| `animateItem` | (item) => void | Function for animating the intersected item. | [See code](https://github.com/Neoflow/Scrollmotion/blob/master/src/default/options.ts#L15) |
 
 **Please note** If you overwrite the default functions of `prepareItem` or `animateItem`, the handling of 
 the animations with [Animate.css](https://animate.style) is not supported anymore.
