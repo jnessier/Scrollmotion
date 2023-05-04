@@ -57,7 +57,7 @@ The library is configurable on initialization with two arguments.
 
 ```javascript
 const selector = '.sm-item'; // Your custom selector
-const sm = new Scrollmotion('.sm-item', {
+const sm = new Scrollmotion(selector, {
    // Your custom options
 });
 ```
