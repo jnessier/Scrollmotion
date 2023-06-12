@@ -1,3 +1,5 @@
+NOT MAINTAINED ANYMORE.
+
 # Scrollmotion
 
 ![Scrollmotion](assets/logo.svg)
