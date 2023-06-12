@@ -100,7 +100,7 @@ which will overwrite the options set on initialization of the library.
 The data attribute `data-sm-ratio` can be used for `ratio` and `data-sm-animate-class` overwrites `animateClass`.
 
 ## Contributors
-* Jonathan Nessier, [Neoflow](https://www.neoflow.ch)
+* Jonathan Nessier
 
 If you would like to see this library develop further, or if you want to support me or show me your appreciation, please
  donate any amount through PayPal. Thank you! :beers:
