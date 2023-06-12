@@ -1,4 +1,7 @@
-NOT MAINTAINED ANYMORE.
+# This project is no longer maintained.
+Please use other solutions for scroll animations.
+
+------------------------------------------------------------
 
 # Scrollmotion
 
